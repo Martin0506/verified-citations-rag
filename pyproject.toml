@@ -1,0 +1,20 @@
+[project]
+name = "verified-citations-rag"
+version = "0.1.0"
+description = "RAG where the server verifies every citation before an answer is shown, and personal data never reaches the model"
+requires-python = ">=3.11"
+dependencies = ["anthropic>=0.80"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
